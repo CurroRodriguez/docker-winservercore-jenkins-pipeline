@@ -9,7 +9,7 @@ RUN Expand-Archive -Path C:\install\mingw.zip -DestinationPath c:\mingw
 RUN c:\mingw\bin\mingw-get.exe update
 
 # === msys ===
-RUN c:\mingw\bin\mingw-get.exe install bash msys-vim msys-openssh msys-findutils
+RUN c:\mingw\bin\mingw-get.exe install bash msys-vim msys-openssh msys-findutils msys-coreutils
 
 # === git ===
 RUN (new-object system.net.webclient).DownloadFile('https://github.com/msysgit/msysgit/releases/download/Git-1.9.5-preview20150319/Git-1.9.5-preview20150319.exe', 'c:\install\git-1.9.5.exe')
